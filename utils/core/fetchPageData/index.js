@@ -9,13 +9,57 @@ export default async function fetchPageData({ ctx }) {
   // TODO: handle homepage
   const normalizedPath = normalizeUrlPath(url)
 
+  // TODO: reduced prices?
   const query = gql`
-    query {
+    {
       seoUrl(seoUrl: "${normalizedPath}") {
         type
         objectId
         stdUrl
         lang
+        category {
+          title
+          products(pagination: {limit: 25}) {
+            id
+            title
+            varMinPrice
+            seo {
+              url
+            }
+            imageGallery {
+              thumb
+            }
+            manufacturer {
+              title
+            }
+          }
+        }
+        product {
+          title
+          price {
+            price
+            currency {
+              sign
+            }
+          }
+        }
+        manufacturer {
+          title
+          products(pagination: {limit: 25}) {
+            id
+            title
+            varMinPrice
+            seo {
+              url
+            }
+            imageGallery {
+              thumb
+            }
+            manufacturer {
+              title
+            }
+          }
+        }
       }
     }
   `

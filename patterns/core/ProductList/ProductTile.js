@@ -6,14 +6,14 @@ export default function ProductTile(props) {
   const {
     title = '',
     shortdescription = '',
-    seo: { url = '' },
+    seo,
     imageGallery: { thumb = '' },
     manufacturer,
   } = props
 
   return (
     <article className="product-item">
-      <Link href={url}>
+      <Link href={seo?.url}>
         <picture className="product-item__image">
           <img data-src={thumb} alt={title} height="245" />
         </picture>

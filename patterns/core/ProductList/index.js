@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import List from './List'
+import { Heading } from '../..'
 import { dispatchShowOverlayEvent, scrollTo } from '../../../utils'
 
 class ProductList extends Component {
@@ -45,19 +46,15 @@ class ProductList extends Component {
   }
 
   render() {
-    const {
-      products = [],
-      queryParams = {},
-      totalProductCount = 0,
-    } = this.props
+    const { title = '', products = [] } = this.props
 
     return (
       <section className="product-list">
+        {title && <Heading>{title}</Heading>}
+
         <div className="product-list__wrapper">
           <List
             products={products}
-            queryParams={queryParams}
-            totalProductCount={totalProductCount}
             submitForms={this.handlePagination}
             isLoading={this.state.isLoading}
           />

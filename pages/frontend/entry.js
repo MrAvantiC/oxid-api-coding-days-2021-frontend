@@ -20,9 +20,9 @@ import ErrorPage from '../_error'
 
 const pageComponents = {
   page: LandingPage,
-  category: ListingPage,
-  manufacturer: ListingPage,
-  'makaira-productgroup': DetailPage,
+  oxcategory: ListingPage,
+  oxmanufacturer: ListingPage,
+  // 'makaira-productgroup': DetailPage,
 }
 
 export default class Index extends Component {
@@ -85,8 +85,8 @@ export default class Index extends Component {
 
     const { pageData } = this.props
     const { type, language } = pageData
-    // const PageComponent = pageComponents[type]
-    const PageComponent = () => <h1>page</h1>
+    const PageComponent = pageComponents[type]
+    // const PageComponent = () => <h1>page</h1>
 
     return (
       <GlobalDataProvider {...this.props}>
