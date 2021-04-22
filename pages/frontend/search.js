@@ -1,6 +1,4 @@
 import { Component } from 'react'
-import qs from 'qs'
-import isEmpty from 'lodash/isEmpty'
 import {
   HeaderWithProps,
   FooterWithProps,
@@ -11,32 +9,20 @@ import {
   GlobalDataProvider,
   ConfigurationProvider,
   TranslationProvider,
-  AbTestingProvider,
-  fetchSearchResult,
-  fetchMenuData,
-  redirect,
-  redirectToDetailPageOnSingleHit,
-  redirectOnSearchRedirectHit,
 } from '../../utils'
 import ErrorPage from '../_error'
 
 export default class Index extends Component {
   static async getInitialProps(ctx) {
-    const { query, res } = ctx
-    const { seoUrl, ...params } = qs.parse(query)
-
-    if (isEmpty(query)) redirect({ ctx, target: '/' })
+    const { res } = ctx
 
     try {
-      const [searchResult, menuData] = await Promise.all([
-        fetchSearchResult({ ctx }),
-        fetchMenuData(),
-      ])
+      // const [searchResult, menuData] = await Promise.all([
+      // fetchSearchResult({ ctx }),
+      // fetchMenuData(),
+      // ])
 
-      redirectToDetailPageOnSingleHit({ ctx, searchResult })
-      redirectOnSearchRedirectHit({ ctx, searchResult })
-
-      return { menuData, searchResult, params }
+      return { menuData: {}, searchResult: {} }
     } catch (error) {
       console.error(error)
 
@@ -64,15 +50,13 @@ export default class Index extends Component {
       <GlobalDataProvider {...this.props}>
         <ConfigurationProvider assetUrl={process.env.MAKAIRA_ASSET_URL}>
           <TranslationProvider language={language}>
-            <AbTestingProvider>
-              <BaseLayout>
-                <HeaderWithProps />
+            <BaseLayout>
+              <HeaderWithProps />
 
-                <SearchResultPage />
+              <SearchResultPage />
 
-                <FooterWithProps />
-              </BaseLayout>
-            </AbTestingProvider>
+              <FooterWithProps />
+            </BaseLayout>
           </TranslationProvider>
         </ConfigurationProvider>
       </GlobalDataProvider>
