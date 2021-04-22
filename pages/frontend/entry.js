@@ -13,6 +13,7 @@ import {
   ConfigurationProvider,
   TranslationProvider,
   wait,
+  fetchMenuData,
 } from '../../utils'
 import ErrorPage from '../_error'
 
@@ -26,10 +27,11 @@ const pageComponents = {
 export default class Index extends Component {
   static async getInitialProps(ctx) {
     const { query, res } = ctx
-    const { seoUrl, ...params } = qs.parse(query)
+    const { seoUrl } = qs.parse(query)
 
     try {
       console.log(seoUrl)
+      const [menuData] = await Promise.all([fetchMenuData()])
       // const [pageData, menuData] = await Promise.all([
       // fetchPageData({ ctx }),
       // fetchMenuData(),
@@ -44,7 +46,8 @@ export default class Index extends Component {
       // }
 
       // TODO
-      return { menuData: [], pageData: {}, params: {} }
+      console.log({ menuData })
+      return { menuData, pageData: {} }
     } catch (error) {
       console.error(error)
 

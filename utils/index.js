@@ -25,8 +25,10 @@ export { default as isMailToLink } from './core/isMailToLink'
 export { default as stripQuery } from './core/stripQuery'
 export { default as stripSlashes } from './core/stripSlashes'
 export { default as redirect } from './core/redirect'
+export { default as GraphQLClient } from './core/GraphQLClient'
 export { default as dispatchShowOverlayEvent } from './core/dispatchShowOverlayEvent'
 export { default as dispatchHideOverlayEvent } from './core/dispatchHideOverlayEvent'
 export { default as dispatchOverlayClickedEvent } from './core/dispatchOverlayClickedEvent'
+export { default as fetchMenuData } from './core/fetchMenuData'
 
 /* Add project specific utils here */
