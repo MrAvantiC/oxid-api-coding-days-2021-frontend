@@ -1,33 +1,21 @@
 import { Heading, Copytext, Text, Link } from '../..'
 import ProductPrices from './ProductPrices'
 import ProductActions from './ProductActions'
-import Ribbon from './Ribbon'
-import classNames from 'classnames'
 
 export default function ProductTile(props) {
   const {
     title = '',
-    picture_url_main = '',
-    manufacturer_title = '',
-    shortdesc = '',
-    url = '',
-    mak_paid_placement = false,
-    isLazyLoad = true,
+    shortdescription = '',
+    seo: { url = '' },
+    imageGallery: { thumb = '' },
+    manufacturer,
   } = props
 
-  const classes = classNames('product-item', {
-    ['product-item--highlight']: mak_paid_placement,
-  })
-
   return (
-    <article className={classes}>
+    <article className="product-item">
       <Link href={url}>
         <picture className="product-item__image">
-          {isLazyLoad ? (
-            <img data-src={picture_url_main} alt={title} height="228" />
-          ) : (
-            <img src={picture_url_main} alt={title} />
-          )}
+          <img data-src={thumb} alt={title} height="245" />
         </picture>
 
         <Heading size="bacchus" weight="600" className="product-item__title">
@@ -39,17 +27,17 @@ export default function ProductTile(props) {
           weight="600"
           className="product-item__manufacturer"
         >
-          {manufacturer_title}
+          {manufacturer?.title}
         </Text>
 
-        <Copytext className="product-item__shortdesc">{shortdesc}</Copytext>
+        <Copytext className="product-item__shortdesc">
+          {shortdescription}
+        </Copytext>
 
         <ProductPrices {...props} />
 
         <ProductActions {...props} />
       </Link>
-
-      <Ribbon isVisible={mak_paid_placement} />
     </article>
   )
 }
