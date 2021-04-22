@@ -6,225 +6,180 @@ export default [
       submitSearchForm: async () => {},
       menu: [
         {
-          text: {
-            en: 'Women',
-            de: 'Damen',
+          id: '943173edecf6d6870a0f357b8ac84d32',
+          title: 'Wakeboarding',
+          seo: {
+            url: 'http://oxid-coding-days.docker.localhost/Wakeboarding/',
           },
-          link: {
-            en: '/',
-            de: '/',
-          },
-          uuid: '881d7273-6341-4a75-b5c7-3a5a2e14fd58',
           children: [
             {
-              text: {
-                en: 'Babys',
-                de: 'Babys',
+              id: '0f4270b89fbef1481958381410a0dbca',
+              title: 'Wakeboards',
+              seo: {
+                url:
+                  'http://oxid-coding-days.docker.localhost/Wakeboarding/Wakeboards/',
               },
-              link: {
-                en: '/',
-                de: '/',
-              },
-              uuid: 'f10b79e0-473e-462c-8a3a-a5cbb9926f84',
-              children: [
-                {
-                  text: {
-                    en: 'Equipment',
-                    de: 'Ausstattung',
-                  },
-                  link: {
-                    en: '/',
-                    de: '/',
-                  },
-                  uuid: '856ada7b-2722-4d54-a247-bec0d663d7e9',
-                  children: [],
-                  expanded: true,
-                },
-                {
-                  text: {
-                    en: 'Clothing',
-                    de: 'Bekleidung',
-                  },
-                  link: {
-                    en: '/',
-                    de: '/',
-                  },
-                  uuid: 'f249b279-f604-4234-a961-81f31b83aec7',
-                  children: [],
-                  expanded: true,
-                },
-                {
-                  text: {
-                    en: 'Shoes',
-                    de: 'Schuhe',
-                  },
-                  link: {
-                    en: '/',
-                    de: '/',
-                  },
-                  uuid: 'ddd09e73-0a4d-4d6d-a931-9429d75e5bcb',
-                  children: [],
-                },
-              ],
-              expanded: true,
-            },
-            {
-              text: {
-                en: 'Girls',
-                de: 'M\u00e4dchen',
-              },
-              link: {
-                en: '/',
-                de: '/',
-              },
-              uuid: 'ea87ad54-77fb-4672-91b5-7b80af6f88a9',
               children: [],
-              expanded: true,
             },
             {
-              text: {
-                en: 'Boys',
-                de: 'Jungen',
+              id: '0f40c6a077b68c21f164767c4a903fd2',
+              title: 'Bindungen',
+              seo: {
+                url:
+                  'http://oxid-coding-days.docker.localhost/Wakeboarding/Bindungen/',
               },
-              link: {
-                en: '/',
-                de: '/',
-              },
-              uuid: 'f87b77d9-b48c-4eaa-8b73-ffac4fcebf22',
               children: [],
-              expanded: true,
             },
             {
-              text: {
-                en: 'School',
-                de: 'Schule',
+              id: 'd86d90e4b441aa3f0004dcda5ba5bb38',
+              title: 'Sets',
+              seo: {
+                url:
+                  'http://oxid-coding-days.docker.localhost/Wakeboarding/Sets/',
               },
-              link: {
-                en: '/',
-                de: '/',
-              },
-              uuid: '84c7086b-760b-4fc9-8489-95df4cfe549d',
-              children: [],
-              expanded: true,
-            },
-            {
-              text: {
-                en: 'Brands',
-                de: 'Marken',
-              },
-              link: {
-                en: '/',
-                de: '/',
-              },
-              uuid: '35900a16-d9fb-44a7-8d3a-1149ffbecba2',
               children: [],
             },
           ],
-          expanded: true,
         },
         {
-          text: {
-            en: 'Men',
-            de: 'Herren',
+          id: '30e44ab83fdee7564.23264141',
+          title: 'Bekleidung',
+          seo: {
+            url: 'http://oxid-coding-days.docker.localhost/Bekleidung/',
           },
-          link: {
-            en: '/',
-            de: '/',
-          },
-          uuid: '2fefe15d-adae-4fd5-9ae9-066e1da9c4ea',
-          children: [],
-          expanded: true,
+          children: [
+            {
+              id: 'fad569d6659caca39bc93e98d13dd58b',
+              title: 'Sportswear',
+              seo: {
+                url:
+                  'http://oxid-coding-days.docker.localhost/Bekleidung/Sportswear/',
+              },
+              children: [
+                {
+                  id: 'fad2d80baf7aca6ac54e819e066f24aa',
+                  title: 'Neopren',
+                  seo: {
+                    url:
+                      'http://oxid-coding-days.docker.localhost/Bekleidung/Sportswear/Neopren/',
+                  },
+                  children: [
+                    {
+                      id: 'fada9485f003c731b7fad08b873214e0',
+                      title: 'Anzüge',
+                      seo: {
+                        url:
+                          'http://oxid-coding-days.docker.localhost/Bekleidung/Sportswear/Neopren/Anzuege/',
+                      },
+                      children: [],
+                    },
+                    {
+                      id: 'd86fdf0d67bf76dc427aabd2e53e0a97',
+                      title: 'Schuhe',
+                      seo: {
+                        url:
+                          'http://oxid-coding-days.docker.localhost/Bekleidung/Sportswear/Neopren/Schuhe/',
+                      },
+                      children: [],
+                    },
+                  ],
+                },
+                {
+                  id: 'fad2a9b0037b71ff1107ae725aae8d1c',
+                  title: 'Sonstiges',
+                  seo: {
+                    url:
+                      'http://oxid-coding-days.docker.localhost/Bekleidung/Sportswear/Sonstiges/',
+                  },
+                  children: [],
+                },
+              ],
+            },
+            {
+              id: 'fad181ad64642b955becd0759345161e',
+              title: 'Fashion',
+              seo: {
+                url:
+                  'http://oxid-coding-days.docker.localhost/Bekleidung/Fashion/',
+              },
+              children: [
+                {
+                  id: 'fadbdb3145458afc5aa4dbf7eb906761',
+                  title: 'Für Sie',
+                  seo: {
+                    url:
+                      'http://oxid-coding-days.docker.localhost/Bekleidung/Fashion/Fuer-Sie/',
+                  },
+                  children: [
+                    {
+                      id: 'd863b76c6bb90a970a5577adf890e8cd',
+                      title: 'Jeans',
+                      seo: {
+                        url:
+                          'http://oxid-coding-days.docker.localhost/Bekleidung/Fashion/Fuer-Sie/Jeans/',
+                      },
+                      children: [],
+                    },
+                    {
+                      id: 'd86779840626d3ab8263b62db85df3f0',
+                      title: 'Shirts &amp; Co.',
+                      seo: {
+                        url:
+                          'http://oxid-coding-days.docker.localhost/Bekleidung/Fashion/Fuer-Sie/Shirts-Co/',
+                      },
+                      children: [],
+                    },
+                  ],
+                },
+                {
+                  id: 'fad7facadcb7d4297f033d242aa0d310',
+                  title: 'Für Ihn',
+                  seo: {
+                    url:
+                      'http://oxid-coding-days.docker.localhost/Bekleidung/Fashion/Fuer-Ihn/',
+                  },
+                  children: [
+                    {
+                      id: 'd8665fef35f4d528e92c3d664f4a00c0',
+                      title: 'Jeans',
+                      seo: {
+                        url:
+                          'http://oxid-coding-days.docker.localhost/Bekleidung/Fashion/Fuer-Ihn/Jeans/',
+                      },
+                      children: [],
+                    },
+                    {
+                      id: 'd862abc1f98741797cf889eb4a9090ad',
+                      title: 'Shirts &amp; Co.',
+                      seo: {
+                        url:
+                          'http://oxid-coding-days.docker.localhost/Bekleidung/Fashion/Fuer-Ihn/Shirts-Co/',
+                      },
+                      children: [],
+                    },
+                  ],
+                },
+                {
+                  id: 'fad4d7e2b47d87bb6a2773d93d4ae9be',
+                  title: 'Accessoires',
+                  seo: {
+                    url:
+                      'http://oxid-coding-days.docker.localhost/Bekleidung/Fashion/Accessoires/',
+                  },
+                  children: [],
+                },
+              ],
+            },
+          ],
         },
         {
-          text: {
-            en: 'Kids',
-            de: 'Kinder',
+          id: 'd862abc1f98741797cf889eb4a9090ad',
+          title: 'Shirts & Co.',
+          seo: {
+            url:
+              'http://oxid-coding-days.docker.localhost/Bekleidung/Fashion/Fuer-Ihn/Shirts-Co/',
           },
-          link: {
-            en: '/',
-            de: '/',
-          },
-          uuid: '170cb8b2-d05d-44ae-bf70-951fc2a018e9',
           children: [],
-          expanded: true,
-        },
-        {
-          text: {
-            en: 'Hardware',
-            de: 'Technik',
-          },
-          link: {
-            en: '',
-            de: '',
-          },
-          uuid: '1ad7a6ee-c844-4ba6-879a-a94204026e87',
-          children: [],
-          expanded: true,
-        },
-        {
-          text: {
-            en: 'Living',
-            de: 'Wohnen',
-          },
-          link: {
-            en: '/',
-            de: '/',
-          },
-          uuid: '2db1bd69-a405-4133-9a8a-d9009c25b572',
-          children: [],
-          expanded: true,
-        },
-        {
-          text: {
-            en: 'Sports',
-            de: 'Sport',
-          },
-          link: {
-            en: '/',
-            de: '/',
-          },
-          uuid: '030f5073-9ed2-472c-8d9f-27896e74e301',
-          children: [],
-          expanded: true,
-        },
-        {
-          text: {
-            en: 'Beauty',
-            de: 'Beauty',
-          },
-          link: {
-            en: '/',
-            de: '/',
-          },
-          uuid: 'bcf4db0c-56e7-45d0-a425-a4a5f81ac796',
-          children: [],
-          expanded: true,
-        },
-        {
-          text: {
-            en: 'Jewelry',
-            de: 'Schmuck',
-          },
-          link: {
-            en: '/',
-            de: '/',
-          },
-          uuid: 'b52da82c-66f1-4f28-b1cc-0b7d0dd252d1',
-          children: [],
-          expanded: true,
-        },
-        {
-          text: {
-            en: 'SALE',
-            de: 'SALE',
-          },
-          link: {
-            en: '/',
-            de: '/',
-          },
-          uuid: '35d7c9b8-aabb-4e1b-a4d0-c495b45b4c2b',
-          children: [],
-          expanded: true,
         },
       ],
     },

@@ -18,16 +18,14 @@ export default function SubcategoryList(props) {
 }
 
 function ParentItem(props) {
-  const { t, language } = useTranslation()
+  const { t } = useTranslation()
   const { shouldRender = false } = props
 
   if (!shouldRender) return null
 
   // We have to construct the title of the menu entry
   // we want to have for our parent item
-  const text = {
-    [language]: t('MOBILE_FILTER_PARENT_ITEM'),
-  }
+  const title = t('MOBILE_FILTER_PARENT_ITEM')
 
-  return <NavigationItem {...props} text={text} />
+  return <NavigationItem {...props} title={title} />
 }

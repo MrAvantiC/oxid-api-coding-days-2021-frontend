@@ -1,16 +1,14 @@
 import { useState } from 'react'
 import classNames from 'classnames'
-import { useTranslation } from '../../../../utils'
 import { ConditionalLink } from '../../..'
 import ExpandIcon from './ExpandIcon'
 import SubcategoryList from './SubcategoryList'
 
 export default function NavigationItem(props) {
   const [isExpanded, toggleExpanded] = useState(false)
-  const { language } = useTranslation()
   const {
-    text = {},
-    link = {},
+    title,
+    seo = {},
     children = [],
     isMainCategory = false,
     className = '',
@@ -35,7 +33,7 @@ export default function NavigationItem(props) {
     <>
       <li className={itemClasses}>
         <ConditionalLink
-          href={link[language]}
+          href={seo?.url}
           onClick={handleClick}
           className="mobile-navigation__link"
           fallbackElement="span"
@@ -45,7 +43,7 @@ export default function NavigationItem(props) {
             isExpanded={isExpanded}
           />
 
-          {text[language]}
+          {title}
 
           <ExpandIcon
             isVisible={hasSubcategories && !isMainCategory}
@@ -57,7 +55,7 @@ export default function NavigationItem(props) {
       <SubcategoryList
         isVisible={hasSubcategories && isExpanded}
         subcategories={children}
-        parent={{ link, shouldRender: !!link[language] }}
+        parent={{ link: seo?.url, shouldRender: !!seo?.url }}
       />
     </>
   )

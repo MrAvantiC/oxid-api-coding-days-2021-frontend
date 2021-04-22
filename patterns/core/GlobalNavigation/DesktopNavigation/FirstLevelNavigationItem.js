@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import classNames from 'classnames'
-import { useTranslation } from '../../../../utils'
 import { ConditionalLink } from '../../..'
 import NavigationFlyout from './NavigationFlyout'
 
@@ -9,8 +8,7 @@ const TRANSITION_DELAY_IN_MS = 200
 export default function FirstLevelNavigationItem(props) {
   const [isExpanded, toggleExpanded] = useState(false)
   const [timerId, setTimer] = useState(null)
-  const { language } = useTranslation()
-  const { text = {}, link = {}, children = [] } = props
+  const { title = '', seo = {}, children = [] } = props
 
   const hasSubcategories = children.length > 0
 
@@ -35,11 +33,11 @@ export default function FirstLevelNavigationItem(props) {
       }}
     >
       <ConditionalLink
-        href={link[language]}
+        href={seo?.url}
         className="desktop-navigation__item-link"
         fallbackElement="span"
       >
-        {text[language]}
+        {title}
       </ConditionalLink>
 
       <NavigationFlyout
