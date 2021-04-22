@@ -18,7 +18,7 @@ export default function NavigationFlyoutColumn(props) {
       {hasSubcategories && (
         <ul className="desktop-navigation__flyout-column-list">
           {children.map((entry) => (
-            <li key={entry.uuid}>
+            <li key={entry.id}>
               <Link href={entry.seo?.url}>
                 <span>{entry.title}</span>
 

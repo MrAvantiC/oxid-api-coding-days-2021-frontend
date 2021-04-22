@@ -8,7 +8,7 @@ export default function NavigationFlyout(props) {
   return (
     <div className="desktop-navigation__flyout">
       {subcategories.map((entry) => (
-        <NavigationFlyoutColumn key={entry.uuid} {...entry} />
+        <NavigationFlyoutColumn key={entry.id} {...entry} />
       ))}
     </div>
   )

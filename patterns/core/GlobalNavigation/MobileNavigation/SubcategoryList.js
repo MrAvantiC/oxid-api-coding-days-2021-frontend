@@ -11,7 +11,7 @@ export default function SubcategoryList(props) {
       <ParentItem {...parent} />
 
       {subcategories.map((entry) => (
-        <NavigationItem key={entry.uuid} {...entry} />
+        <NavigationItem key={entry.id} {...entry} />
       ))}
     </ul>
   )

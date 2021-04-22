@@ -47,7 +47,7 @@ export default function MobileNavigation(props) {
       <nav className="mobile-navigation" arial-label="Primary Navigation">
         <ul>
           {menu.map((entry) => (
-            <NavigationItem key={entry.uuid} {...entry} isMainCategory={true} />
+            <NavigationItem key={entry.id} {...entry} isMainCategory={true} />
           ))}
         </ul>
       </nav>
