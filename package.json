@@ -44,7 +44,8 @@
     "react-image-magnifiers": "^1.4.0",
     "react-slick": "^0.28.1",
     "stylus": "^0.54.8",
-    "ua-parser-js": "^0.7.26"
+    "ua-parser-js": "^0.7.26",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
