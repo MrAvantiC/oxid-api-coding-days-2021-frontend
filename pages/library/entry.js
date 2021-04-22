@@ -91,7 +91,7 @@ export default function Index() {
 
       <nav className={navigationClasses}>
         <figure className="pali__home-icon">
-          <img src="/assets/library/makaira-logo.png" alt="logo" />
+          <img src="/assets/images/header/OXID_eShop_Logo.png" alt="logo" />
         </figure>
 
         <ul className="pali__list">

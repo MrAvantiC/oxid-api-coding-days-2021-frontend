@@ -37,7 +37,7 @@ export default function ErrorPage(props) {
   return (
     <main className="error-page">
       <Link href="/" className="error-page__logo">
-        <img src="/assets/images/header/logo_dummy.svg" alt="Logo" />
+        <img src="/assets/images/header/OXID_eShop_Logo.png" alt="Logo" />
       </Link>
 
       <div className="error-page__gradient">

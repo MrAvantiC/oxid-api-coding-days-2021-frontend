@@ -151,7 +151,7 @@ class Header extends Component {
 
           <Link href="/">
             <img
-              src="/assets/images/header/logo_dummy.svg"
+              src="/assets/images/header/OXID_eShop_Logo.png"
               alt="Logo"
               className="header__logo"
             />
