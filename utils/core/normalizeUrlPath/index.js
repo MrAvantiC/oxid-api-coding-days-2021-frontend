@@ -1,7 +1,7 @@
-import { stripSlashes } from '../..'
-
 export default function normalizeUrlPath(path) {
-  const stripped = stripSlashes(path)
+  let stripped = path
+    .replace(/^\/+/, '') // leading slash
+    .replace(/\/$/, '') // trailing slash
 
   if (stripped.endsWith('html') || stripped.endsWith('html')) {
     return stripped

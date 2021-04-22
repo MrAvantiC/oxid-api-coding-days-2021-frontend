@@ -18,4 +18,10 @@ describe('normalizeUrlPath()', () => {
     const formatted = normalizeUrlPath(path)
     expect(formatted).toEqual('Kiteboards.html')
   })
+
+  it('should keep all other slashes"', () => {
+    const path = '/Bekleidung/Fashion/Fuer-Sie/'
+    const formatted = normalizeUrlPath(path)
+    expect(formatted).toEqual('Bekleidung/Fashion/Fuer-Sie/')
+  })
 })
