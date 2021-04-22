@@ -70,11 +70,7 @@ async function fetchMenuFromApi() {
     }
   `
 
-  try {
-    const response = await GraphQLClient.request(query)
+  const response = await GraphQLClient.request(query)
 
-    return response.categories
-  } catch (error) {
-    console.error(error)
-  }
+  return response.categories
 }

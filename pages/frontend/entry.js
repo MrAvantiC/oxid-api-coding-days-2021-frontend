@@ -14,6 +14,7 @@ import {
   TranslationProvider,
   wait,
   fetchMenuData,
+  fetchPageData,
 } from '../../utils'
 import ErrorPage from '../_error'
 
@@ -30,24 +31,12 @@ export default class Index extends Component {
     const { seoUrl } = qs.parse(query)
 
     try {
-      console.log(seoUrl)
-      const [menuData] = await Promise.all([fetchMenuData()])
-      // const [pageData, menuData] = await Promise.all([
-      // fetchPageData({ ctx }),
-      // fetchMenuData(),
-      // ])
+      const [pageData, menuData] = await Promise.all([
+        fetchPageData({ ctx }),
+        fetchMenuData(),
+      ])
 
-      // if (pageData.type == 'redirect') {
-      // const {
-      // data: { target, code },
-      // } = pageData
-
-      // redirect({ ctx, target, code })
-      // }
-
-      // TODO
-      console.log({ menuData })
-      return { menuData, pageData: {} }
+      return { menuData, pageData }
     } catch (error) {
       console.error(error)
 

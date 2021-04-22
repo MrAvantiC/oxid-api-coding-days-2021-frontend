@@ -30,5 +30,7 @@ export { default as dispatchShowOverlayEvent } from './core/dispatchShowOverlayE
 export { default as dispatchHideOverlayEvent } from './core/dispatchHideOverlayEvent'
 export { default as dispatchOverlayClickedEvent } from './core/dispatchOverlayClickedEvent'
 export { default as fetchMenuData } from './core/fetchMenuData'
+export { default as fetchPageData } from './core/fetchPageData'
+export { default as normalizeUrlPath } from './core/normalizeUrlPath'
 
 /* Add project specific utils here */
