@@ -20,6 +20,7 @@ class GlobalDataProvider extends Component {
         id: null,
         items: [],
       },
+      totalItemCount: 0,
     }
   }
 
@@ -42,6 +43,12 @@ class GlobalDataProvider extends Component {
 
   async componentDidMount() {
     await this.getToken()
+
+    window.addEventListener('update:basket', this.handleUpdateBasketItems)
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('update:basket', this.handleUpdateBasketItems)
   }
 
   getToken = async () => {
@@ -90,9 +97,21 @@ class GlobalDataProvider extends Component {
     }
   }
 
-  updateBasketItems = (items) => {
+  handleUpdateBasketItems = (event) => {
+    const { items } = event.detail
+
+    this.updateBasketItems(items)
+  }
+
+  updateBasketItems = (items = []) => {
+    const totalItemCount = items.reduce((total, current) => {
+      total = total + current.amount
+
+      return total
+    }, 0)
+
     this.setState(
-      { basket: { ...this.state.basket, items } },
+      { basket: { ...this.state.basket, items }, totalItemCount },
       this.updateLocalStorage
     )
   }

@@ -1,5 +1,5 @@
 import { gql } from 'graphql-request'
-import { GraphQLClient } from '../..'
+import { GraphQLClient, dispatchUpdateBasketEvent } from '../..'
 
 export default async function addToBasket({ productId, amount = 1 }) {
   const basket = JSON.parse(localStorage.getItem('basket'))
@@ -25,5 +25,6 @@ export default async function addToBasket({ productId, amount = 1 }) {
   `
 
   const response = await GraphQLClient.request(mutation)
-  console.log(response)
+
+  dispatchUpdateBasketEvent(response.basketAddProduct)
 }

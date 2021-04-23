@@ -168,7 +168,7 @@ class Header extends Component {
                 activateMobileSearch={this.activateMobileSearch}
               />
 
-              <Actions />
+              <Actions {...this.props} />
             </div>
           </div>
         </header>

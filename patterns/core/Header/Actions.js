@@ -1,8 +1,7 @@
 import { Button, FormattedPrice } from '../..'
 import { useTranslation } from '../../../utils'
 
-// TODO: Remove hard-coded implementation
-export default function Actions() {
+export default function Actions(props) {
   const { t } = useTranslation()
 
   return (
@@ -39,9 +38,11 @@ export default function Actions() {
           className="header__action"
           iconPosition="left"
         >
-          <span className="header__basket-bubble">2</span>
-
-          <FormattedPrice price="259.89" />
+          {props.totalItemCount > 0 && (
+            <span className="header__basket-bubble">
+              {props.totalItemCount}
+            </span>
+          )}
         </Button>
       </div>
     </>
