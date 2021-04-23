@@ -19,7 +19,7 @@ import {
 import ErrorPage from '../_error'
 
 const pageComponents = {
-  page: LandingPage,
+  home: LandingPage,
   oxcategory: ListingPage,
   oxmanufacturer: ListingPage,
   oxarticle: DetailPage,

@@ -1,5 +1,4 @@
 import { useGlobalData } from '../../utils'
-import Metadata from './Metadata'
 import { ContentElements } from '../../patterns'
 
 function Landingpage() {
@@ -10,8 +9,6 @@ function Landingpage() {
 
   return (
     <main>
-      <Metadata />
-
       <ContentElements elements={config.main.elements} />
     </main>
   )

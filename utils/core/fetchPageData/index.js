@@ -1,10 +1,19 @@
 import { gql } from 'graphql-request'
 import { normalizeUrlPath, GraphQLClient } from '../..'
+import homepageData from './homepageData'
 
 export default async function fetchPageData({ ctx }) {
   const {
     query: { seoUrl: url },
   } = ctx
+
+  if (url == '/') {
+    return {
+      type: 'home',
+      data: homepageData,
+      language: 'de',
+    }
+  }
 
   // TODO: handle homepage
   const normalizedPath = normalizeUrlPath(url)
