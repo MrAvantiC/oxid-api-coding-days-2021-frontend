@@ -64,15 +64,15 @@ class GlobalDataProvider extends Component {
   }
 
   fetchOrCreateBasket = async () => {
+    GraphQLClient.setHeader('authorization', `Bearer ${this.state.token}`)
+
     let basket
-    // const basketId = JSON.parse(localStorage.getItem('basketId')
+
     if (localStorage.getItem('basket')) {
       basket = JSON.parse(localStorage.getItem('basket'))
 
       this.setState({ basket }, this.updateLocalStorage)
     } else {
-      GraphQLClient.setHeader('authorization', `Bearer ${this.state.token}`)
-
       const mutation = gql`
         mutation {
           basketCreate(basket: { title: "${uuidv4()}", public: false }) {
@@ -106,6 +106,10 @@ class GlobalDataProvider extends Component {
 
     if (this.state.basket) {
       localStorage.setItem('basket', JSON.stringify(this.state.basket))
+    }
+
+    if (this.state.token) {
+      localStorage.setItem('token', JSON.stringify(this.state.token))
     }
   }
 

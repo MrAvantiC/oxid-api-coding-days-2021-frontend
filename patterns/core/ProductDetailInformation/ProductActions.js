@@ -1,9 +1,10 @@
+import { useState } from 'react'
 import { Button, Dropdown } from '../..'
 import { useTranslation } from '../../../utils'
 
-// TODO: Add functionality (add-to-wishlist, add-to-cart etc.)
-export default function ProductActions() {
+export default function ProductActions(props) {
   const { t } = useTranslation()
+  const [amount, setAmount] = useState(1)
 
   const quantities = [
     { label: '1', value: 1 },
@@ -11,6 +12,10 @@ export default function ProductActions() {
     { label: '3', value: 3 },
     { label: '4', value: 4 },
   ]
+
+  function addToBasket() {
+    props.handleToBasket(amount)
+  }
 
   return (
     <div className="product-detail-information__actions">
@@ -23,11 +28,16 @@ export default function ProductActions() {
       <Dropdown
         id="sizeVariant"
         options={quantities}
-        onChange={() => console.log('todo')}
+        onChange={({ value }) => setAmount(value)}
         className="product-detail-information__quantity-select"
       />
 
-      <Button variant="primary-alt" icon="cart" iconPosition="left">
+      <Button
+        variant="primary-alt"
+        icon="cart"
+        iconPosition="left"
+        onClick={addToBasket}
+      >
         {t('PRODUCT_DETAIL_ADD_TO_CART')}
       </Button>
     </div>

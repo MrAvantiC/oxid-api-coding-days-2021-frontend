@@ -32,5 +32,6 @@ export { default as dispatchOverlayClickedEvent } from './core/dispatchOverlayCl
 export { default as fetchMenuData } from './core/fetchMenuData'
 export { default as fetchPageData } from './core/fetchPageData'
 export { default as normalizeUrlPath } from './core/normalizeUrlPath'
+export { default as addToBasket } from './core/addToBasket'
 
 /* Add project specific utils here */

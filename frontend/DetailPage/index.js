@@ -1,9 +1,20 @@
-import { useGlobalData } from '../../utils'
+import { useGlobalData, addToBasket } from '../../utils'
 import { ProductDetailInformation } from '../../patterns'
 
 function DetailPage() {
   const { pageData } = useGlobalData()
-  const productDetailProps = { ...pageData.product }
+
+  function handleToBasket(amount) {
+    addToBasket({
+      productId: pageData.objectId,
+      amount,
+    })
+  }
+
+  const productDetailProps = {
+    ...pageData.product,
+    handleToBasket,
+  }
 
   return (
     <main>
