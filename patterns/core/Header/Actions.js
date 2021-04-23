@@ -1,4 +1,4 @@
-import { Button, FormattedPrice } from '../..'
+import { Button } from '../..'
 import { useTranslation } from '../../../utils'
 
 export default function Actions(props) {

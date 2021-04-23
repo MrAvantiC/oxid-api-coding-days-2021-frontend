@@ -1,5 +1,5 @@
 import classNames from 'classnames'
-import { Button, Icon } from '../../..'
+import { Button } from '../../..'
 import NavigationItem from './NavigationItem'
 import InfoLinks from './InfoLinks'
 
@@ -8,10 +8,6 @@ export default function MobileNavigation(props) {
     menu = [],
     isMobileNavigationVisible = false,
     hideMobileNavigation,
-    mobileSearchInputRef,
-    searchPhrase,
-    changeSearchPhrase,
-    submitForm,
   } = props
 
   const flyoutClasses = classNames('mobile-navigation__flyout', {
@@ -26,22 +22,6 @@ export default function MobileNavigation(props) {
           icon="times"
           onClick={hideMobileNavigation}
         />
-
-        <form className="mobile-navigation__search" onSubmit={submitForm}>
-          <label>
-            <Icon symbol="search" />
-
-            <input
-              type="text"
-              name="searchPhraseMobile"
-              value={searchPhrase}
-              onChange={changeSearchPhrase}
-              required="required"
-              className="mobile-navgation__search-input"
-              ref={mobileSearchInputRef}
-            />
-          </label>
-        </form>
       </div>
 
       <nav className="mobile-navigation" arial-label="Primary Navigation">
