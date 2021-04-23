@@ -65,4 +65,6 @@ export default {
   FILTER_LABEL_SHOW_LESS: 'Weniger anzeigen',
   FILTER_LABEL_SHOW_MORE: 'Mehr anzeigen',
   RECOMMENDATION_HEADING: 'Ähnliche Produkte',
+  WEEK: 'Wochen',
+  DAY: 'Tage',
 }

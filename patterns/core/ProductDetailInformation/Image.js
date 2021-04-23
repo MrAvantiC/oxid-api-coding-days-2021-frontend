@@ -6,18 +6,21 @@ import {
   TOUCH_ACTIVATION,
 } from 'react-image-magnifiers'
 
-import { Button } from '../..'
-
 export default function Image(props) {
-  const { title = '', picture_url_main = '', magnifier_type = 'tap' } = props
+  const {
+    title = '',
+    imageGallery = [],
+    magnifier_type = 'side_by_side',
+  } = props
+  const main = imageGallery.images[0]
 
   return (
     <div className="product-detail-information__image">
       {magnifier_type === 'tap' && (
         <Magnifier
-          imageSrc={picture_url_main}
+          imageSrc={main.image}
           imageAlt={title}
-          largeImageSrc={picture_url_main}
+          largeImageSrc={main.zoom}
           mouseActivation={MOUSE_ACTIVATION.CLICK} // Optional
           touchActivation={TOUCH_ACTIVATION.TAP} // Optional
         />
@@ -27,17 +30,17 @@ export default function Image(props) {
         <GlassMagnifier
           magnifierSize={'40%'}
           square={true}
-          imageSrc={picture_url_main}
+          imageSrc={main.image}
           imageAlt={title}
-          largeImageSrc={picture_url_main}
+          largeImageSrc={main.zoom}
         />
       )}
 
       {magnifier_type === 'side_by_side' && (
         <SideBySideMagnifier
-          imageSrc={picture_url_main}
+          imageSrc={main.image}
           imageAlt={title}
-          largeImageSrc={picture_url_main}
+          largeImageSrc={main.zoom}
           alwaysInPlace={false}
           overlayOpacity={0.6}
           switchSides={false}
@@ -51,12 +54,6 @@ export default function Image(props) {
           fillGapBottom={1}
         />
       )}
-
-      <Button
-        icon="search"
-        variant="icon-only"
-        className="product-detail-information__image-button"
-      />
     </div>
   )
 }

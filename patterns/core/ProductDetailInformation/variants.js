@@ -1,50 +1,46 @@
 const default_props = {
-  ean: '4260040558015',
-  datatype: 'makaira-productgroup',
-  price: 289,
-  picture_url_main: '/assets/images/productDetailInformation/example.jpg',
-  id: '106060',
-  title: 'SONY KD-55XG8577 LED TV (4K UHD)',
-  attributeStr: [
-    {
-      id: 'attribute-color',
-      title: 'Farbe',
-      value: 'Blau',
-    },
-    {
-      id: 'attribute-color',
-      title: 'Farbe',
-      value: 'Grün',
-    },
-    {
-      id: 'attribute-color',
-      title: 'Farbe',
-      value: 'Rot',
-    },
-    {
-      id: 'attribute-size',
-      title: 'Größe',
-      value: 'S',
-    },
-    {
-      id: 'attribute-size',
-      title: 'Größe',
-      value: 'M',
-    },
-    {
-      id: 'attribute-size',
-      title: 'Größe',
-      value: 'L',
-    },
-  ],
-  url: '/leitz-eins-zwei-dry-rotwein-106060.html',
-  longdesc:
-    'Als gebietstypischer Vertreter der Pfalz ist von dem Spätburgunder EINS-ZWEI-DRY des Weinguts Leitz viel zu erwarten. Ein Versprechen, das dieser Wein halten kann. Dank der intensiven Mazeration und Maischegärung präsentiert er sich purpurrot im Glas. Dezente Aromen von Erde, Leder und Tabak steigen in die Nase. Er duftet nach reifen Früchten wie Kirschen und Beeren. Im Mund intensivieren sich die Aromen zum Geschmack nach Sauerkirschen und Waldbeeren.\nDurch die Lagerung im Barrique erhält der Wein eine sanfte Holznote, welche wunderbar mit den Fruchtaromen des Weines harmoniert. Eine gut ausgeprägte Säurestruktur steht dem gut ausgebildeten Tannin-Gerüst entgegen und verleiht dem Wein Körper sowie Lagerfähigkeit. Dieser Wein eignet sich perfekt, um ein schönes Abendessen zu vervollständigen, insbesondere als Begleitung zu geschmortem Hirschragout mit karamellisierten Birnen und Röstkartoffeln.\nDas Weingut Josef Leitz, welches hinter diesem Wein steckt ist international anerkannt und renommiert. Es blickt schon auf eine lange Tradition zurück, versteht sich aber ebenso darauf, mit der Zeit zu gehen und sich weiterzuentwickeln.',
-
-  // added props
-  picture_url_small:
-    '/assets/images/productDetailInformation/example_small.jpg',
-  magnifier_type: 'tap',
+  title: 'Stewart+Brown Lace Scoop Neck Tee',
+  price: {
+    price: 59.9,
+  },
+  listPrice: {
+    price: 79.9,
+  },
+  longDescription:
+    '<div style="font: 12px \'Lucida Grande\',Lucida,Verdana,sans-serif">Raffiniertes Langarm-Shirt aus Pima-Baumwolle. Am Ausschnitt ist der weiche Stoff leicht gerafft und mit zwei verspielten Knöpfen versehen. Das Shirt kommt aus der exklusiven Stewart+Brown Organic Cotton Linie und verspricht die Verwendung feinster Pima-Baumwolle. Pima Baumwolle besteht aus besonders langstapeligen Fasern, die die hohe Qualität ausmachen.<br />\r\n<br /><strong>100% ökologisch angebaute Baumwolle, 100% Fair Trade.</strong><br />\r\n<br /><font face="Times New Roman" size="3"><strong><span></span></strong></font>\r\n</div>',
+  deliveryTime: {
+    minDeliveryTime: 4,
+    maxDeliveryTime: 6,
+    deliveryTimeUnit: 'WEEK',
+  },
+  imageGallery: {
+    images: [
+      {
+        image:
+          'https://oxid-coding-days.scalecommerce.cloud/out/pictures/generated/product/1/540_340_75/front_z1(16)_z1.jpg',
+        zoom:
+          'https://oxid-coding-days.scalecommerce.cloud/out/pictures/generated/product/1/665_665_75/front_z1(16)_z1.jpg',
+      },
+      {
+        image:
+          'https://oxid-coding-days.scalecommerce.cloud/out/pictures/generated/product/2/540_340_75/back_z2(16)_z2.jpg',
+        zoom:
+          'https://oxid-coding-days.scalecommerce.cloud/out/pictures/generated/product/2/665_665_75/back_z2(16)_z2.jpg',
+      },
+      {
+        image:
+          'https://oxid-coding-days.scalecommerce.cloud/out/pictures/generated/product/3/540_340_75/detail1_z3(16)_z3.jpg',
+        zoom:
+          'https://oxid-coding-days.scalecommerce.cloud/out/pictures/generated/product/3/665_665_75/detail1_z3(16)_z3.jpg',
+      },
+      {
+        image:
+          'https://oxid-coding-days.scalecommerce.cloud/out/pictures/generated/product/4/540_340_75/detail2_z4(16)_z4.jpg',
+        zoom:
+          'https://oxid-coding-days.scalecommerce.cloud/out/pictures/generated/product/4/665_665_75/detail2_z4(16)_z4.jpg',
+      },
+    ],
+  },
 }
 
 export default [

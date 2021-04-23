@@ -1,7 +1,9 @@
 import classNames from 'classnames'
+import { useTranslation } from '../../../utils'
 
-// TODO: Remove hard-coded implementation
-export default function ProductAvailability() {
+export default function ProductAvailability(props) {
+  const { deliveryTime = {} } = props
+  const { t } = useTranslation()
   const isOnStock = true
 
   const classes = classNames('product-detail-information__availability', {
@@ -11,7 +13,8 @@ export default function ProductAvailability() {
   return (
     <span className={classes}>
       <span className="product-detail-information__availability-icon" />
-      1-2 Tage Lieferzeit
+      {deliveryTime.minDeliveryTime} - {deliveryTime.maxDeliveryTime}{' '}
+      {t(deliveryTime.deliveryTimeUnit)}
     </span>
   )
 }
