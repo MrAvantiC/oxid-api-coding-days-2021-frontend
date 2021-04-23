@@ -3,7 +3,7 @@ import { ProductDetailInformation } from '../../patterns'
 
 function DetailPage() {
   const { pageData } = useGlobalData()
-  const productDetailProps = { ...pageData.data.self }
+  const productDetailProps = { ...pageData.product }
 
   return (
     <main>

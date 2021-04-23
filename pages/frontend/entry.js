@@ -22,7 +22,7 @@ const pageComponents = {
   page: LandingPage,
   oxcategory: ListingPage,
   oxmanufacturer: ListingPage,
-  // 'makaira-productgroup': DetailPage,
+  oxarticle: DetailPage,
 }
 
 export default class Index extends Component {
@@ -86,7 +86,6 @@ export default class Index extends Component {
     const { pageData } = this.props
     const { type, language } = pageData
     const PageComponent = pageComponents[type]
-    // const PageComponent = () => <h1>page</h1>
 
     return (
       <GlobalDataProvider {...this.props}>
