@@ -38,9 +38,6 @@ export default async function fetchPageData({ ctx }) {
           price {
             price
           }
-          listPrice {
-            price
-          }
           longDescription
           deliveryTime {
             minDeliveryTime
